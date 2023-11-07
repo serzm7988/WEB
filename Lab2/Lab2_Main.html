@@ -4,116 +4,128 @@
         <meta charset="UTF-8">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <title>Holiday everyday!</title>
+        <link rel="stylesheet" href="MainStyles.css"></linkrel>
     </head>
-    <body topmargin="0" bottommargin="0" leftmargin="0" rightmargin="0" bgcolor="#4B0082" text="#E6E6FA">
-        <img src="background.JPG" align="" width="100%">
-        <h1 align="center">Праздник каждый день!</h1>
-        <p align="right">
-            <form action="Lab2_Main.html">
-                <button>Главная</button>
-            </form>
-            <form action="Calendar.html">
-                <button>Календарь</button>
-            </form>
-            <form action="Statistics.html">
-                <button>Статистика</button>
-            </form>
-                <button>Участники проекта</button>
-            </form>
-        </p>    
-        <table width="100%" cellspacing="10">
-            <tr>
-                <td width="25%" rowspan="10"  valign="top">
-                    <h3 align="center">Описание</h3>
-                    <p></p>
-                </td>
-                <td width="25%" rowspan="10" valign="top">
-                    <img src="IMG_20220521_202130.jpg" width="100%"> 
-                </td>
-                <td width="25%">
-                    <img src="IMG_8293.JPG" width="100%">
-                </td>
-                <td width="25%" align="center">
-                    12 Апреля<br>
-                    День космонавтики
-                </td>
-            </tr>
-            <tr>
-                <td colspan="2">
-                    <font>Памятная дата, посвященная первому полету человека в космос.<br>
-                        Это особенный день — день триумфа науки и всех тех, кто трудится в космической отрасли.</font>
-                </td>
-            </tr>
-            <tr>
-                <td width="25%">
-                    <img src="IMG_20220520_204142_725.JPG" width="100%">
-                </td>
-                <td width="25%" align="center">
-                    16 Мая<br>
-                    День света
-                </td>
-            </tr>
-            <tr>
-                <td colspan="2">
-                    <font>Его целью, согласно ЮНЕСКО, является укрепление сотрудничества<br>
-                        и использование его потенциала для содействия миру и развитию.<br>
-                        Световые технологии играют важную роль в образовании, науке, искусстве,<br>
-                        культуре, устойчивом развитии, коммуникациях, энергетике и медицине.</font>
-                </td>
-            </tr>
-            <tr>
-                <td width="25%">
-                    <img src="IMG_20220320_194350.jpg" width="100%">
-                </td>
-                <td width="25%" align="center">
-                    20 Марта<br>
-                    День муки
-                </td>
-            </tr>
-            <tr>
-                <td colspan="2">
-                    <font>Организация National Day Calendar объявила 20 марта Международным днём муки.<br>
-                        «Наконец-то в календаре появился день, в который мы можем чествовать «белое золото»,<br>
-                         основу жизни – муку», – говорил инициатор идеи Карстен Блюм,<br>
-                        представитель музея FlourWorld Museum, расположенного в немецком городе Виттенбурге.<br>
-                        Этот день отмечают многие хлеборобы, пекари и мукомольная отрасль – от Лиссабона до Сахалина.</font>
-                </td>
-            </tr>
-            <tr>
-                <td width="25%">
-                    <img src="IMG_20220508_183852_084.JPG" width="100%">
-                </td>
-                <td width="25%" align="center">
-                    8 Мая<br>
-                    День перешагивания через ступеньку
-                </td>
-            </tr>
-            <tr>
-                <td colspan="2">
-                    <font>Этот вид передвижения - скакать через ступеньки - давно забыт взрослыми и широко практикуется детьми
+    <body>
+        <div class="header">
+            <!--<img src="background.JPG">-->
+            <h1>Праздник каждый день!</h1>
+            <div class="navigation">
+                <form>
+                    <button>Участники проекта</button>
+                </form>
+                <form action="Statistics.html">
+                    <button>Статистика</button>
+                </form>
+                <form action="Calendar.html">
+                    <button>Календарь</button>
+                </form>
+                <form action="Lab2_Main.html">
+                    <button>Главная</button>
+                </form>
+            </div> 
+        </div>
+        <div class="main">
+            <div class="introduction">
+                    Описание
+                <img src="IMG_20220521_202130.jpg"> 
+            </div>
+            <div class="list">
+                <div class="list-element">
+                    <div class="list-element-img">
+                        <img src="IMG_8293.JPG">
+                    </div>
+                    <div class="list-element-name">
+                        <p>12 Апреля</p>
+                        <p>День космонавтики</p>
+                    </div>
+                    <div class="list-element-description">
+                        Памятная дата, посвященная первому полету человека в космос.
+                        Это особенный день — день триумфа науки и всех тех, кто трудится в космической отрасли.
+                    </div>
+                    <div class="list-element-button">
+                        <a href="#">...</a>
+                    </div>
+                </div>
+                <div class="list-element">
+                    <div class="list-element-img">
+                        <img src="IMG_20220520_204142_725.JPG">
+                    </div>
+                    <div class="list-element-name">
+                        <p>16 Мая</p>
+                        <p>День света</p>
+                    </div>
+                    <div class="list-element-description">
+                        Его целью, согласно ЮНЕСКО, является укрепление сотрудничества
+                        и использование его потенциала для содействия миру и развитию.
+                        Световые технологии играют важную роль в образовании, науке, искусстве,
+                        культуре, устойчивом развитии, коммуникациях, энергетике и медицине.
+                    </div>
+                    <div class="list-element-button">
+                        <a href="#">...</a>
+                    </div>
+                </div>
+                <div class="list-element">
+                    <div class="list-element-img">
+                        <img src="IMG_20220320_194350.jpg">
+                    </div>
+                    <div class="list-element-name">
+                        <p>20 Марта</p>
+                        <p>День муки</p>
+                    </div>
+                    <div class="list-element-description">    
+                        Организация National Day Calendar объявила 20 марта Международным днём муки.
+                        «Наконец-то в календаре появился день, в который мы можем чествовать «белое золото»,
+                        основу жизни – муку», – говорил инициатор идеи Карстен Блюм,
+                        представитель музея FlourWorld Museum, расположенного в немецком городе Виттенбурге.
+                        Этот день отмечают многие хлеборобы, пекари и мукомольная отрасль – от Лиссабона до Сахалина.
+                    </div>
+                    <div class="list-element-button">
+                        <a href="#">...</a>
+                    </div>
+                </div>
+                <div class="list-element">
+                    <div class="list-element-img">
+                        <img src="IMG_20220508_183852_084.JPG">
+                    </div>
+                    <div class="list-element-name">
+                        <p>8 Мая</p>
+                        <p>День перешагивания через ступеньку</p>
+                    </div>
+                    <div class="list-element-description">
+                        Этот вид передвижения - скакать через ступеньки - давно забыт взрослыми и широко практикуется детьми.
                         При этом ступенькой может быть что угодно:<br>
-                        &nbsp;&nbsp;- лестница в подъезде<br>
-                        &nbsp;&nbsp;- лестница в карьере<br>
-                        &nbsp;&nbsp;- лестница на пути к мечте...<br>
-                        Главное - переступив, удержаться...</font>
-                </td>
-            </tr>
-            <tr>
-                <td width="25%">
-                    <img src="IMG_20220323_222836.jpg" width="100%">
-                </td>
-                <td width="25%" align="center">
-                    23 Марта<br>
-                    День OK
-                </td>
-            </tr>
-            <tr>
-                <td colspan="2">
-                    <font>Считается, что именно 23 марта 1839 года впервые появилось выражение «O.K.»<br> 
-                        По некоторым сведениям, в бостонской газете «#MorningPost»,<br> 
-                        это выражение появилось как шуточное сокращение неправильно написанного «all korrect».</font>
-                </td>
-            </tr>
-        </table>
+                        &nbsp;&nbsp;- лестница в подъезде,<br>
+                        &nbsp;&nbsp;- лестница в карьере,<br>
+                        &nbsp;&nbsp;- лестница на пути к мечте.<br>
+                        Главное - переступив, удержаться.
+                    </div>
+                    <div class="list-element-button">
+                        <a href="#">...</a>
+                    </div>
+                </div>
+                <div class="list-element">
+                    <div class="list-element-img">
+                        <img src="IMG_20220323_222836.jpg">
+                    </div>
+                    <div class="list-element-name">
+                        <p>23 Марта</p>
+                        <p>День OK</p>
+                    </div>
+                    <div class="list-element-description">
+                        Считается, что именно 23 марта 1839 года впервые появилось выражение «O.K.»
+                        По некоторым сведениям, в бостонской газете «#MorningPost»,
+                        это выражение появилось как шуточное сокращение неправильно написанного «all korrect».
+                    </div>
+                    <div class="list-element-button">
+                        <a href="#">...</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="footer">
+            <p>© Михайлов С.О., Б9121-09.03.04 2023-2024</p>
+            <a href="#">✉ Контакты</a>
+        </div>
     </body>
 </html>
