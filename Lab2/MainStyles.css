@@ -47,8 +47,16 @@ body {
     padding: 1%;
 }
 
+.introduction-description {
+    display: block;
+    width: 48%;
+    float: left;
+    text-align: left;
+}
+
 .introduction img{
-    width: 50%;
+    display: block;
+    width: 48%;
     float: right;
 }
 
