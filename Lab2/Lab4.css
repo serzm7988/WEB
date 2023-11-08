@@ -1,0 +1,119 @@
+@import url('https://fonts.googleapis.com/css2?family=Stalinist+One&display=swap');
+
+body {
+    display: flex;
+    flex-direction: column;
+    margin: 0px;
+    background: no-repeat top/100% url("background.JPG");
+    background-color: #03000e;
+    color: #f2bdef;
+    text-align: center;
+}
+
+.header {
+    display: flex;
+    flex-direction: column;
+    width: 80%;
+    margin: 50% auto 1%;
+}
+
+.header .navigation {
+    display: flex;
+    justify-content: space-around;
+    width: 100%;
+}
+
+.navigation form{
+    flex-basis: 15%;
+}
+
+.navigation button {
+    width: 100%;
+}
+
+.main {
+    display: flex;
+    width: 80%;
+    margin: auto;
+    padding: 1%;
+    background-color: rgb(79, 6, 168);
+}
+
+.main .introduction {
+    display: flex;
+    flex-basis: 65%;
+}
+
+.introduction-picture {
+    display: inline-block;
+    flex-basis: 50%;
+}
+
+.introduction-description {
+    flex-basis: 50%;
+    text-align: justify;
+    padding: 1%;
+}
+
+.main .list {
+    display: flex;
+    flex-direction: column;
+    flex-basis: 35%;
+}
+
+.list-element {
+    display: flex;
+    flex-wrap: wrap;
+    padding: 1%;
+    border: solid thin rgb(255, 0, 221);
+}
+
+.list-element-picture {
+    flex-basis: 50%;
+}
+
+.list-element-name {
+    flex-basis: 50%;
+}
+
+.list-element-description {
+    flex-basis: 100%;
+    text-align: justify;
+}
+
+.footer {
+    width: 80%;
+    margin: 0.5% auto 1%;
+    padding: 1%;
+    background-color: rgb(79, 6, 168);
+    text-align: left;
+}
+
+h1 {
+    font-size: 5vw;
+    font-family: 'Stalinist One', sans-serif;
+}
+
+img {
+    width: 100%;
+}
+
+a {
+    float: right;
+    color: inherit;
+    text-decoration: none;
+}
+
+@media(max-width:700px) {
+    .header .navigation {
+        flex-wrap: wrap;
+    }
+    
+    .navigation form{
+        flex-basis: 40%;
+    }
+
+    .main {
+        flex-direction: column;
+    }
+}
