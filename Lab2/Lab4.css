@@ -24,11 +24,14 @@ body {
 }
 
 .navigation form{
-    flex-basis: 15%;
+    flex-basis: 20%;
 }
 
 .navigation button {
     width: 100%;
+    border: 0px;
+    font-size: 1vw;
+    background-color: rgb(255, 0, 221);
 }
 
 .main {
