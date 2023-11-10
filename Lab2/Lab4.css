@@ -14,7 +14,7 @@ body {
     display: flex;
     flex-direction: column;
     width: 80%;
-    margin: 20% auto 1%;
+    margin: 10% auto 1%;
 }
 
 .header .navigation {
@@ -31,7 +31,11 @@ body {
     width: 100%;
     border: 0px;
     font-size: 1vw;
-    background-color: rgb(255, 0, 221);
+    color: rgb(255, 0, 221);
+    background-color: rgba(255, 0, 221, 0);
+}
+#first {
+    color: rgb(255, 0, 102);
 }
 
 .main {
