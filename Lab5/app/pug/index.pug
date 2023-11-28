@@ -52,7 +52,6 @@ html(lang="ru")
 			h1 Праздник каждый день!
 			div.navigation
 				each value, key in menu
-					div.navigation-element
 						if active == key 
 							a.active(href= value)= key
 						else
@@ -80,8 +79,8 @@ html(lang="ru")
 							a(href="#") ...
 
 		div.footer
-			p Mихайлов С.О., Б9121-09.03.04 2023-2024
-				a(href="#") Контакты
+			p &#169 Mихайлов С.О., Б9121-09.03.04 2023-2024
+			a(href="#") &#9993 Контакты
 
 		//- Scripts
 		script(src="js/jquery-3.5.1.min.js")

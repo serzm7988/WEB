@@ -14,20 +14,20 @@ body {
   width: 80%;
   margin: 20% auto 1%;
 }
-.header .navigation {
+.navigation {
   display: flex;
   width: 100%;
   justify-content: space-around;
 }
-.navigation-element {
-  display: flex;
+.navigation a {
+  font-size: 1.3em;
   flex-basis: 20%;
-  border: 0px;
-  font-size: 1vw;
-  background-color: #f0d;
+  display: inline-block;
+  background: #f0d;
+  padding: 0.5%;
 }
-.navigation-element a {
-  margin: auto;
+.navigation a:hover {
+  background-color: #cc00b1;
 }
 #first {
   color: #f06;
@@ -74,11 +74,13 @@ body {
   text-align: justify;
 }
 .footer {
+  display: flex;
   width: 80%;
   margin: 0.5% auto 1%;
   padding: 1%;
   background-color: #4f06a8;
   text-align: left;
+  justify-content: space-between;
 }
 h1 {
   font-size: 5vw;
@@ -92,12 +94,17 @@ a {
   color: inherit;
   text-decoration: none;
 }
+a:hover {
+  text-decoration: none;
+  color: inherit;
+}
 @media (max-width: 700px) {
   .navigation {
     flex-wrap: wrap;
   }
   .navigation a {
     flex-basis: 40%;
+    margin: 1%;
   }
   .main {
     flex-direction: column;
