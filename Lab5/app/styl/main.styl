@@ -1,5 +1,21 @@
 @import url('https://fonts.googleapis.com/css2?family=Stalinist+One&display=swap');
 
+navigation()
+	.navigation
+		display flex
+		width 100%
+		justify-content space-around
+
+	.navigation a 
+		font-size 1.3em
+		flex-basis 20%
+		display inline-block
+		background rgb(255, 0, 221)
+		padding 0.5%
+
+	.navigation a:hover
+		background-color rgb(204, 0, 177)
+
 body
 	display flex
 	flex-direction column
@@ -15,20 +31,7 @@ body
 	width 80%
 	margin 20% auto 1%
 
-.navigation
-	display flex
-	width 100%
-	justify-content space-around
-
-.navigation a 
-	font-size 1.3em
-	flex-basis 20%
-	display inline-block
-	background rgb(255, 0, 221)
-	padding 0.5%
-
-.navigation a:hover
-	background-color rgb(204, 0, 177)
+navigation()
 
 #first
 	color rgb(255, 0, 102)
