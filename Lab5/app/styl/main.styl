@@ -43,9 +43,10 @@ navigation()
 	padding 1%
 	background-color rgb(79, 6, 168)
 
-.main .introduction
-	display flex
-	flex-basis 65%
+.main 
+	& .introduction
+		display flex
+		flex-basis 65%
 
 .introduction-picture
 	display inline-block
@@ -56,10 +57,11 @@ navigation()
 	text-align justify
 	padding 1%
 
-.main .list
-	display flex
-	flex-direction column
-	flex-basis 35%
+.main 
+	& .list
+		display flex
+		flex-direction column
+		flex-basis 35%
 
 .list-element
 	display flex
@@ -68,8 +70,6 @@ navigation()
 	border solid thin rgb(255, 0, 221)
 
 .list-element-picture
-	flex-basis 50%
-
 .list-element-name
 	flex-basis 50%
 

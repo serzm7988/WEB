@@ -38,6 +38,15 @@ block variables
 			'text' : 'Считается, что именно 23 марта 1839 года впервые появилось выражение «O.K.» По некоторым сведениям, в бостонской газете «#MorningPost», это выражение появилось как шуточное сокращение неправильно написанного «all korrect».'
 			}
 		]
+
+mixin navigation(Menu)
+	div.navigation
+		each value, key in Menu
+			if active == key 
+				a.active(href= value)= key
+			else
+				a(href= value)= key
+
 <!DOCTYPE html>
 html(lang="ru")
 	head
@@ -50,12 +59,7 @@ html(lang="ru")
 	body(background="img/background.JPG")
 		div.header
 			h1 Праздник каждый день!
-			div.navigation
-				each value, key in menu
-						if active == key 
-							a.active(href= value)= key
-						else
-							a(href= value)= key
+			+navigation(menu)
 
 		div.main
 			div.introduction

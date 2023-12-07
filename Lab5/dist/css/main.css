@@ -63,9 +63,7 @@ body {
   padding: 1%;
   border: solid thin #f0d;
 }
-.list-element-picture {
-  flex-basis: 50%;
-}
+.list-element-picture,
 .list-element-name {
   flex-basis: 50%;
 }
