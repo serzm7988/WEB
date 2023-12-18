@@ -1,0 +1,541 @@
+
+<header>
+  <link rel="stylesheet" href="css/statistic.css"/>
+  <body>
+    <div class="header">
+      <h1>Статистика</h1>
+      <div class="navigation"><a href="index.html">Главная</a><a href="calendar.html">Календарь</a><a href="statistic.html">Статистика</a><a href="members.html">Участники</a>
+      </div>
+    </div>
+    <div class="main">
+      <div class="settings">
+        <form class="filters">
+          <details>
+            <summary> <span>Фильтры</span></summary>
+            <div><span>Название: </span>
+              <input type="text"/>
+            </div>
+            <div> <span>Дата: </span>
+              <input type="date"/>
+            </div>
+            <div> <span>Просмотры: от </span>
+              <input type="number"/><span>до </span>
+              <input type="number"/>
+            </div>
+            <div> <span>Лайки: от </span>
+              <input type="number"/><span>до </span>
+              <input type="number"/>
+            </div>
+            <div> <span>Формат:</span>
+              <select>
+                <option value="none"></option>
+                <option value="video">Видео</option>
+                <option value="photo">Фото</option>
+              </select>
+            </div>
+            <div> <span>Страна: </span>
+              <input type="text"/>
+            </div>
+            <button>Поиск</button>
+          </details>
+        </form>
+        <form class="schedule">
+          <details>
+            <summary>График</summary>
+            <div class="value">
+              <h4>Значение по оси OX</h4>
+              <input type="radio" name="OXValue" value="date"/><span>Дата</span>
+              <input type="radio" name="OXValue" value="country"/><span>Страна</span>
+              <input type="radio" name="OXValue" value="format"/><span>Формат</span>
+            </div>
+            <div class="result">
+              <h4>Результат</h4>
+              <input type="checkbox" name="result" value="max"/><span>Максимальное количество просмотров</span>
+              <input type="checkbox" name="result" value="min"/><span>Минимальное количество просмотров</span>
+            </div>
+            <button>Построить</button>
+          </details>
+        </form>
+        <form class="sorting">
+          <details>
+            <summary>Сортировка</summary>
+            <div><span>Первый уровень сортировки по </span>
+              <select> 
+                <option><span>названию</span></option>
+                <option><span>дате</span></option>
+                <option><span>просмотрам</span></option>
+                <option><span>лайкам</span></option>
+                <option><span>формату</span></option>
+                <option><span>стране</span></option>
+              </select><span>по</span>
+              <select>
+                <option><span>возрастанию</span></option>
+                <option><span>убыванию</span></option>
+              </select>
+            </div>
+            <div><span>Второй уровень сортировки по </span>
+              <select> 
+                <option><span>названию</span></option>
+                <option><span>дате</span></option>
+                <option><span>просмотрам</span></option>
+                <option><span>лайкам</span></option>
+                <option><span>формату</span></option>
+                <option><span>стране</span></option>
+              </select><span>по</span>
+              <select>
+                <option><span>возрастанию</span></option>
+                <option><span>убыванию</span></option>
+              </select>
+            </div>
+            <div><span>Третий уровень сортировки по </span>
+              <select> 
+                <option><span>названию</span></option>
+                <option><span>дате</span></option>
+                <option><span>просмотрам</span></option>
+                <option><span>лайкам</span></option>
+                <option><span>формату</span></option>
+                <option><span>стране</span></option>
+              </select><span>по</span>
+              <select>
+                <option><span>возрастанию</span></option>
+                <option><span>убыванию</span></option>
+              </select>
+            </div>
+            <button>Отсортировать</button>
+          </details>
+        </form>
+      </div>
+      <table>
+        <tr>
+          <th>Название</th>
+          <th>Дата</th>
+          <th>Просмотры</th>
+          <th>Лайки</th>
+          <th>Формат</th>
+          <th>Страна</th>
+        </tr>
+        <tr>
+          <td>Новый год</td>
+          <td>01.01</td>
+          <td>40</td>
+          <td>9</td>
+          <td>Видео</td>
+          <td>Страны, использующие григорианский календарь</td>
+        </tr>
+        <tr>
+          <td>День интроверта</td>
+          <td>02.01</td>
+          <td>45</td>
+          <td>8</td>
+          <td>Фото</td>
+          <td>Международный</td>
+        </tr>
+        <tr>
+          <td>Сонный день</td>
+          <td>03.01</td>
+          <td>37</td>
+          <td>2</td>
+          <td>Фото</td>
+          <td>США</td>
+        </tr>
+        <tr>
+          <td>День гипноза</td>
+          <td>04.01</td>
+          <td>34</td>
+          <td>10</td>
+          <td>Видео</td>
+          <td>Международный</td>
+        </tr>
+        <tr>
+          <td>Разгрузочный день</td>
+          <td>05.01</td>
+          <td>37</td>
+          <td>6</td>
+          <td>Фото</td>
+          <td>Международный</td>
+        </tr>
+        <tr>
+          <td>Хур-хрум день</td>
+          <td>06.01</td>
+          <td>35</td>
+          <td>4</td>
+          <td>Видео</td>
+          <td>Международный</td>
+        </tr>
+        <tr>
+          <td>День программиста</td>
+          <td>07.01</td>
+          <td>39</td>
+          <td>8</td>
+          <td>Видео</td>
+          <td>Международный</td>
+        </tr>
+        <tr>
+          <td>День вращения Земли</td>
+          <td>08.01</td>
+          <td>36</td>
+          <td>5</td>
+          <td>Видео</td>
+          <td>Международный</td>
+        </tr>
+        <tr>
+          <td>День в прятки зимой</td>
+          <td>09.01</td>
+          <td>37</td>
+          <td>4</td>
+          <td>Фото</td>
+          <td>Славянский</td>
+        </tr>
+        <tr>
+          <td>День своеобразных людей</td>
+          <td>10.01</td>
+          <td>36</td>
+          <td>7</td>
+          <td>Фото</td>
+          <td>Международный</td>
+        </tr>
+        <tr>
+          <td>День &quot;Узнай Своё Имя В Азбуке Морзе&quot;</td>
+          <td>11.01</td>
+          <td>38</td>
+          <td>7</td>
+          <td>Видео</td>
+          <td>Международный</td>
+        </tr>
+        <tr>
+          <td>День похищений</td>
+          <td>12.01</td>
+          <td>43</td>
+          <td>10</td>
+          <td>Видео</td>
+          <td>Славянский</td>
+        </tr>
+        <tr>
+          <td>День случайных попутчиков</td>
+          <td>13.01</td>
+          <td>40</td>
+          <td>4</td>
+          <td>Видео</td>
+          <td>Международный</td>
+        </tr>
+        <tr>
+          <td>День логики</td>
+          <td>14.01</td>
+          <td>42</td>
+          <td>8</td>
+          <td>Видео</td>
+          <td>Международный</td>
+        </tr>
+        <tr>
+          <td>День рождение Википедии</td>
+          <td>15.01</td>
+          <td>36</td>
+          <td>8</td>
+          <td>Фото</td>
+          <td>Международный</td>
+        </tr>
+        <tr>
+          <td>День The Beatles</td>
+          <td>16.01</td>
+          <td>42</td>
+          <td>9</td>
+          <td>Фото</td>
+          <td>Международный</td>
+        </tr>
+        <tr>
+          <td>День наставничества</td>
+          <td>17.01</td>
+          <td>43</td>
+          <td>8</td>
+          <td>Видео</td>
+          <td>Международный</td>
+        </tr>
+        <tr>
+          <td>День толкового словаря</td>
+          <td>18.01</td>
+          <td>37</td>
+          <td>4</td>
+          <td>Фото</td>
+          <td>Российский</td>
+        </tr>
+        <tr>
+          <td>День хорошей памяти</td>
+          <td>19.01</td>
+          <td>35</td>
+          <td>5</td>
+          <td>Видео</td>
+          <td>Международный</td>
+        </tr>
+        <tr>
+          <td>День прогулки на свежем воздухе</td>
+          <td>20.01</td>
+          <td>42</td>
+          <td>7</td>
+          <td>Фото</td>
+          <td>Международный</td>
+        </tr>
+        <tr>
+          <td>День алкогольной зависимости</td>
+          <td>21.01</td>
+          <td>38</td>
+          <td>7</td>
+          <td>Фото</td>
+          <td>Международный</td>
+        </tr>
+        <tr>
+          <td>День попкрона</td>
+          <td>22.01</td>
+          <td>39</td>
+          <td>5</td>
+          <td>Фото</td>
+          <td>Международный</td>
+        </tr>
+        <tr>
+          <td>День пирогов</td>
+          <td>23.01</td>
+          <td>34</td>
+          <td>5</td>
+          <td>Фото</td>
+          <td>Международный</td>
+        </tr>
+        <tr>
+          <td>День эскимо</td>
+          <td>24.01</td>
+          <td>37</td>
+          <td>5</td>
+          <td>Фото</td>
+          <td>Международный</td>
+        </tr>
+        <tr>
+          <td>День студента</td>
+          <td>25.01</td>
+          <td>38</td>
+          <td>6</td>
+          <td>Фото</td>
+          <td>Российский</td>
+        </tr>
+        <tr>
+          <td>День Шелфи в библиотеке</td>
+          <td>26.01</td>
+          <td>41</td>
+          <td>7</td>
+          <td>Фото</td>
+          <td>Международный</td>
+        </tr>
+        <tr>
+          <td>День несочитаемых цветов в одежде</td>
+          <td>27.01</td>
+          <td>36</td>
+          <td>5</td>
+          <td>Фото</td>
+          <td>Международный</td>
+        </tr>
+        <tr>
+          <td>День лего</td>
+          <td>28.01</td>
+          <td>40</td>
+          <td>4</td>
+          <td>Фото</td>
+          <td>Международный</td>
+        </tr>
+        <tr>
+          <td>День неспешного заплтания кос</td>
+          <td>29.01</td>
+          <td>35</td>
+          <td>6</td>
+          <td>Фото</td>
+          <td>Российский</td>
+        </tr>
+        <tr>
+          <td>День без интернета</td>
+          <td>30.01</td>
+          <td>39</td>
+          <td>6</td>
+          <td>Фото</td>
+          <td>Международный</td>
+        </tr>
+        <tr>
+          <td>День скотча</td>
+          <td>31.01</td>
+          <td>42</td>
+          <td>7</td>
+          <td>Видео</td>
+          <td>Международный</td>
+        </tr>
+        <tr>
+          <td>День лифтовика</td>
+          <td>01.02</td>
+          <td>34</td>
+          <td>6</td>
+          <td>Фото</td>
+          <td>Международный</td>
+        </tr>
+        <tr>
+          <td>День укулеле</td>
+          <td>02.02</td>
+          <td>32</td>
+          <td>5</td>
+          <td>Видео</td>
+          <td>Международный</td>
+        </tr>
+        <tr>
+          <td>День борьбы с ненормативной лексикой</td>
+          <td>03.02</td>
+          <td>39</td>
+          <td>9</td>
+          <td>Видео</td>
+          <td>Международный</td>
+        </tr>
+        <tr>
+          <td>День хорошего настроения</td>
+          <td>04.02</td>
+          <td>36</td>
+          <td>9</td>
+          <td>Видео</td>
+          <td>Международный</td>
+        </tr>
+        <tr>
+          <td>День Nutella</td>
+          <td>05.02</td>
+          <td>32</td>
+          <td>7</td>
+          <td>Фото</td>
+          <td>Международный</td>
+        </tr>
+        <tr>
+          <td>День ступенек и лестниц</td>
+          <td>06.02</td>
+          <td>41</td>
+          <td>6</td>
+          <td>Видео</td>
+          <td>Международный</td>
+        </tr>
+        <tr>
+          <td>День полетов на луну</td>
+          <td>07.02</td>
+          <td>39</td>
+          <td>7</td>
+          <td>Фото</td>
+          <td>Международный</td>
+        </tr>
+        <tr>
+          <td>День подбрасывания монетки</td>
+          <td>08.02</td>
+          <td>33</td>
+          <td>6</td>
+          <td>Видео</td>
+          <td>Международный</td>
+        </tr>
+        <tr>
+          <td>День стоматолога</td>
+          <td>09.02</td>
+          <td>34</td>
+          <td>4</td>
+          <td>Видео</td>
+          <td>Международный</td>
+        </tr>
+        <tr>
+          <td>День Александра Сергеевича Пушкина</td>
+          <td>10.02</td>
+          <td>42</td>
+          <td>6</td>
+          <td>Фото</td>
+          <td>Российский</td>
+        </tr>
+        <tr>
+          <td>День больного</td>
+          <td>11.02</td>
+          <td>42</td>
+          <td>6</td>
+          <td>Видео</td>
+          <td>Международный</td>
+        </tr>
+        <tr>
+          <td>Лыжня России</td>
+          <td>12.02</td>
+          <td>37</td>
+          <td>6</td>
+          <td>Фото</td>
+          <td>Российский</td>
+        </tr>
+        <tr>
+          <td>День зимних видов спорта</td>
+          <td>13.02</td>
+          <td>40</td>
+          <td>5</td>
+          <td>Фото</td>
+          <td>Российский</td>
+        </tr>
+        <tr>
+          <td>День всех влюблённых</td>
+          <td>14.02</td>
+          <td>38</td>
+          <td>5</td>
+          <td>Фото</td>
+          <td>Международный</td>
+        </tr>
+        <tr>
+          <td>День перезагрузки любви</td>
+          <td>15.02</td>
+          <td>35</td>
+          <td>3</td>
+          <td>Фото</td>
+          <td>Международный</td>
+        </tr>
+        <tr>
+          <td>День свежих ананасов</td>
+          <td>16.02</td>
+          <td>36</td>
+          <td>3</td>
+          <td>Фото</td>
+          <td>Международный</td>
+        </tr>
+        <tr>
+          <td>День спонтанного проявления доброты</td>
+          <td>17.02</td>
+          <td>36</td>
+          <td>4</td>
+          <td>Видео</td>
+          <td>Международный</td>
+        </tr>
+        <tr>
+          <td>День пельменей</td>
+          <td>18.02</td>
+          <td>32</td>
+          <td>5</td>
+          <td>Фото</td>
+          <td>Российский</td>
+        </tr>
+        <tr>
+          <td>День перетягивания каната</td>
+          <td>19.02</td>
+          <td>35</td>
+          <td>4</td>
+          <td>Фото</td>
+          <td>Международный</td>
+        </tr>
+        <tr>
+          <td>День леденцовых петушков</td>
+          <td>20.02</td>
+          <td>35</td>
+          <td>6</td>
+          <td>Фото</td>
+          <td>Российский</td>
+        </tr>
+      </table>
+    </div>
+    <footer></footer>
+  </body>
+</header><!DOCTYPE html>
+<html lang="ru">
+  <head>
+    <meta charset="UTF-8"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no"/>
+    <title>Holiday everyday!</title>
+    <link rel="stylesheet" href="css/bootstrap-reboot.min.css"/>
+    <link rel="stylesheet" href="css/main.css"/>
+  </head>
+</html>
+<div class="footer">
+  <p>&#169 Mихайлов С.О., Б9121-09.03.04 2023-2024</p><a href="#">&#9993 Контакты</a>
+</div>

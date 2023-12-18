@@ -1,0 +1,21 @@
+mixin navigation(Menu)
+	div.navigation
+		each value, key in Menu
+				a(href= value)= key
+
+block variables
+
+block header
+	<!DOCTYPE html>
+		html(lang="ru")
+			head
+				meta(charset="UTF-8")
+				meta(name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no")
+				title #{title}
+				link(rel="stylesheet", href="css/bootstrap-reboot.min.css")
+				link(rel="stylesheet", href="css/main.css")
+
+block footer
+	div.footer
+		p &#169 Mихайлов С.О., Б9121-09.03.04 2023-2024
+		a(href="#") &#9993 Контакты

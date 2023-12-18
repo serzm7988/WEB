@@ -1,0 +1,22 @@
+extends template
+block variables
+	- var title = 'Holiday everyday!'
+
+	-
+		var menu = { 
+			'Главная': 'index.html',
+			'Календарь': "calendar.html",
+			'Статистика': "statistic.html",
+			'Участники': "members.html"
+		}
+
+	header
+		body
+			div.header
+				h1 Праздник каждый дeнь!
+				+navigation(menu)
+			div.main
+				.picture
+					img(src="img/calendar-2022-horoshego-kachestva-zvet.png")
+				.description
+					h3 В данном календаре вы можете выбрать любой день и узнать какой праздник был в эту дату, прочитать его историю возникновения, а также увидеть моё фото или видео, приуроченное к этому празднику

@@ -1,0 +1,464 @@
+extends template
+block variables
+	- var title = 'Holiday everyday!'
+
+	-
+		var menu = { 
+			'Главная': 'index.html',
+			'Календарь': "calendar.html",
+			'Статистика': "statistic.html",
+			'Участники': "members.html"
+		}
+	- var SortingValues = ['названию', 'дате', 'просмотрам', 'лайкам', 'формату', 'стране']
+	- var SortingChanges = ['возрастанию', 'убыванию']
+	- var SortingNumber = ['Первый уровень сортировки по ', 'Второй уровень сортировки по ', 'Третий уровень сортировки по ']
+	-
+		var TableElements = [
+			{'name' : 'Новый год',
+			'date' : '01.01',
+			'views' : '40',
+			'likes' : '9',
+			'format' : 'Видео',
+			'country' : 'Страны, использующие григорианский календарь'
+			},
+			{'name' : 'День интроверта',
+			'date' : '02.01',
+			'views' : '45',
+			'likes' : '8',
+			'format' : 'Фото',
+			'country' : 'Международный'
+			},
+			{'name' : 'Сонный день',
+			'date' : '03.01',
+			'views' : '37',
+			'likes' : '2',
+			'format' : 'Фото',
+			'country' : 'США'
+			},
+			{'name' : 'День гипноза',
+			'date' : '04.01',
+			'views' : '34',
+			'likes' : '10',
+			'format' : 'Видео',
+			'country' : 'Международный'
+			},
+			{'name' : 'Разгрузочный день',
+			'date' : '05.01',
+			'views' : '37',
+			'likes' : '6',
+			'format' : 'Фото',
+			'country' : 'Международный'
+			},
+			{'name' : 'Хур-хрум день',
+			'date' : '06.01',
+			'views' : '35',
+			'likes' : '4',
+			'format' : 'Видео',
+			'country' : 'Международный'
+			},
+			{'name' : 'День программиста',
+			'date' : '07.01',
+			'views' : '39',
+			'likes' : '8',
+			'format' : 'Видео',
+			'country' : 'Международный'
+			},
+			{'name' : 'День вращения Земли',
+			'date' : '08.01',
+			'views' : '36',
+			'likes' : '5',
+			'format' : 'Видео',
+			'country' : 'Международный'
+			},
+			{'name' : 'День в прятки зимой',
+			'date' : '09.01',
+			'views' : '37',
+			'likes' : '4',
+			'format' : 'Фото',
+			'country' : 'Славянский'
+			},
+			{'name' : 'День своеобразных людей',
+			'date' : '10.01',
+			'views' : '36',
+			'likes' : '7',
+			'format' : 'Фото',
+			'country' : 'Международный'
+			},
+			{'name' : 'День "Узнай Своё Имя В Азбуке Морзе"',
+			'date' : '11.01',
+			'views' : '38',
+			'likes' : '7',
+			'format' : 'Видео',
+			'country' : 'Международный'
+			},
+			{'name' : 'День похищений',
+			'date' : '12.01',
+			'views' : '43',
+			'likes' : '10',
+			'format' : 'Видео',
+			'country' : 'Славянский'
+			},
+			{'name' : 'День случайных попутчиков',
+			'date' : '13.01',
+			'views' : '40',
+			'likes' : '4',
+			'format' : 'Видео',
+			'country' : 'Международный'
+			},
+			{'name' : 'День логики',
+			'date' : '14.01',
+			'views' : '42',
+			'likes' : '8',
+			'format' : 'Видео',
+			'country' : 'Международный'
+			},
+			{'name' : 'День рождение Википедии',
+			'date' : '15.01',
+			'views' : '36',
+			'likes' : '8',
+			'format' : 'Фото',
+			'country' : 'Международный'
+			},
+			{'name' : 'День The Beatles',
+			'date' : '16.01',
+			'views' : '42',
+			'likes' : '9',
+			'format' : 'Фото',
+			'country' : 'Международный'
+			},
+			{'name' : 'День наставничества',
+			'date' : '17.01',
+			'views' : '43',
+			'likes' : '8',
+			'format' : 'Видео',
+			'country' : 'Международный'
+			},
+			{'name' : 'День толкового словаря',
+			'date' : '18.01',
+			'views' : '37',
+			'likes' : '4',
+			'format' : 'Фото',
+			'country' : 'Российский'
+			},
+			{'name' : 'День хорошей памяти',
+			'date' : '19.01',
+			'views' : '35',
+			'likes' : '5',
+			'format' : 'Видео',
+			'country' : 'Международный'
+			},
+			{'name' : 'День прогулки на свежем воздухе',
+			'date' : '20.01',
+			'views' : '42',
+			'likes' : '7',
+			'format' : 'Фото',
+			'country' : 'Международный'
+			},
+			{'name' : 'День алкогольной зависимости',
+			'date' : '21.01',
+			'views' : '38',
+			'likes' : '7',
+			'format' : 'Фото',
+			'country' : 'Международный'
+			},
+			{'name' : 'День попкрона',
+			'date' : '22.01',
+			'views' : '39',
+			'likes' : '5',
+			'format' : 'Фото',
+			'country' : 'Международный'
+			},
+			{'name' : 'День пирогов',
+			'date' : '23.01',
+			'views' : '34',
+			'likes' : '5',
+			'format' : 'Фото',
+			'country' : 'Международный'
+			},
+			{'name' : 'День эскимо',
+			'date' : '24.01',
+			'views' : '37',
+			'likes' : '5',
+			'format' : 'Фото',
+			'country' : 'Международный'
+			},
+			{'name' : 'День студента',
+			'date' : '25.01',
+			'views' : '38',
+			'likes' : '6',
+			'format' : 'Фото',
+			'country' : 'Российский'
+			},
+			{'name' : 'День Шелфи в библиотеке',
+			'date' : '26.01',
+			'views' : '41',
+			'likes' : '7',
+			'format' : 'Фото',
+			'country' : 'Международный'
+			},
+			{'name' : 'День несочитаемых цветов в одежде',
+			'date' : '27.01',
+			'views' : '36',
+			'likes' : '5',
+			'format' : 'Фото',
+			'country' : 'Международный'
+			},
+			{'name' : 'День лего',
+			'date' : '28.01',
+			'views' : '40',
+			'likes' : '4',
+			'format' : 'Фото',
+			'country' : 'Международный'
+			},
+			{'name' : 'День неспешного заплтания кос',
+			'date' : '29.01',
+			'views' : '35',
+			'likes' : '6',
+			'format' : 'Фото',
+			'country' : 'Российский'
+			},
+			{'name' : 'День без интернета',
+			'date' : '30.01',
+			'views' : '39',
+			'likes' : '6',
+			'format' : 'Фото',
+			'country' : 'Международный'
+			},
+			{'name' : 'День скотча',
+			'date' : '31.01',
+			'views' : '42',
+			'likes' : '7',
+			'format' : 'Видео',
+			'country' : 'Международный'
+			},
+			{'name' : 'День лифтовика',
+			'date' : '01.02',
+			'views' : '34',
+			'likes' : '6',
+			'format' : 'Фото',
+			'country' : 'Международный'
+			},
+			{'name' : 'День укулеле',
+			'date' : '02.02',
+			'views' : '32',
+			'likes' : '5',
+			'format' : 'Видео',
+			'country' : 'Международный'
+			},
+			{'name' : 'День борьбы с ненормативной лексикой',
+			'date' : '03.02',
+			'views' : '39',
+			'likes' : '9',
+			'format' : 'Видео',
+			'country' : 'Международный'
+			},
+			{'name' : 'День хорошего настроения',
+			'date' : '04.02',
+			'views' : '36',
+			'likes' : '9',
+			'format' : 'Видео',
+			'country' : 'Международный'
+			},
+			{'name' : 'День Nutella',
+			'date' : '05.02',
+			'views' : '32',
+			'likes' : '7',
+			'format' : 'Фото',
+			'country' : 'Международный'
+			},
+			{'name' : 'День ступенек и лестниц',
+			'date' : '06.02',
+			'views' : '41',
+			'likes' : '6',
+			'format' : 'Видео',
+			'country' : 'Международный'
+			},
+			{'name' : 'День полетов на луну',
+			'date' : '07.02',
+			'views' : '39',
+			'likes' : '7',
+			'format' : 'Фото',
+			'country' : 'Международный'
+			},
+			{'name' : 'День подбрасывания монетки',
+			'date' : '08.02',
+			'views' : '33',
+			'likes' : '6',
+			'format' : 'Видео',
+			'country' : 'Международный'
+			},
+			{'name' : 'День стоматолога',
+			'date' : '09.02',
+			'views' : '34',
+			'likes' : '4',
+			'format' : 'Видео',
+			'country' : 'Международный'
+			},
+			{'name' : 'День Александра Сергеевича Пушкина',
+			'date' : '10.02',
+			'views' : '42',
+			'likes' : '6',
+			'format' : 'Фото',
+			'country' : 'Российский'
+			},
+			{'name' : 'День больного',
+			'date' : '11.02',
+			'views' : '42',
+			'likes' : '6',
+			'format' : 'Видео',
+			'country' : 'Международный'
+			},
+			{'name' : 'Лыжня России',
+			'date' : '12.02',
+			'views' : '37',
+			'likes' : '6',
+			'format' : 'Фото',
+			'country' : 'Российский'
+			},
+			{'name' : 'День зимних видов спорта',
+			'date' : '13.02',
+			'views' : '40',
+			'likes' : '5',
+			'format' : 'Фото',
+			'country' : 'Российский'
+			},
+			{'name' : 'День всех влюблённых',
+			'date' : '14.02',
+			'views' : '38',
+			'likes' : '5',
+			'format' : 'Фото',
+			'country' : 'Международный'
+			},
+			{'name' : 'День перезагрузки любви',
+			'date' : '15.02',
+			'views' : '35',
+			'likes' : '3',
+			'format' : 'Фото',
+			'country' : 'Международный'
+			},
+			{'name' : 'День свежих ананасов',
+			'date' : '16.02',
+			'views' : '36',
+			'likes' : '3',
+			'format' : 'Фото',
+			'country' : 'Международный'
+			},
+			{'name' : 'День спонтанного проявления доброты',
+			'date' : '17.02',
+			'views' : '36',
+			'likes' : '4',
+			'format' : 'Видео',
+			'country' : 'Международный'
+			},
+			{'name' : 'День пельменей',
+			'date' : '18.02',
+			'views' : '32',
+			'likes' : '5',
+			'format' : 'Фото',
+			'country' : 'Российский'
+			},
+			{'name' : 'День перетягивания каната',
+			'date' : '19.02',
+			'views' : '35',
+			'likes' : '4',
+			'format' : 'Фото',
+			'country' : 'Международный'
+			},
+			{'name' : 'День леденцовых петушков',
+			'date' : '20.02',
+			'views' : '35',
+			'likes' : '6',
+			'format' : 'Фото',
+			'country' : 'Российский'
+			}
+		]
+	header
+		link(rel="stylesheet", href="css/statistic.css")
+		body()
+			.header
+				h1 Статистика
+				+navigation(menu)
+			.main
+				.settings
+					form.filters
+						details
+							summary 
+								span Фильтры
+							div
+								span Название: 
+								input(type="text")
+							div 
+								span Дата: 
+								input(type="date")
+							div 
+								span Просмотры: от 
+								input(type="number") 
+								span до 
+								input(type="number")
+							div 
+								span Лайки: от 
+								input(type="number") 
+								span до 
+								input(type="number")
+							div 
+								span Формат:
+								select
+									option(value="none")
+									option(value="video") Видео
+									option(value="photo") Фото
+							div 
+								span Страна: 
+								input(type="text")
+							button Поиск
+					form.schedule
+						details
+							summary График
+							div.value
+								h4 Значение по оси OX
+								input(type="radio" name="OXValue" value="date") 
+								span Дата
+								input(type="radio" name="OXValue" value="country") 
+								span Страна
+								input(type="radio" name="OXValue" value="format") 
+								span Формат
+							div.result
+								h4 Результат
+								input(type="checkbox" name="result" value="max") 
+								span Максимальное количество просмотров
+								input(type="checkbox" name="result" value="min") 
+								span Минимальное количество просмотров
+							button Построить
+					form.sorting
+						details
+							summary Сортировка
+							each item in SortingNumber
+								div
+									span= item
+									select 
+										each value in SortingValues
+											option
+												span= value
+									span по
+									select
+										each value in SortingChanges
+											option
+												span= value
+							button Отсортировать
+				table
+					tr
+						th Название
+						th Дата
+						th Просмотры
+						th Лайки
+						th Формат
+						th Страна
+					each item in TableElements
+						tr
+							td= item.name
+							td= item.date
+							td= item.views
+							td= item.likes
+							td= item.format
+							td= item.country
+			footer
+					
