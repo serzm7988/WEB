@@ -99,7 +99,7 @@ td:hover {
 .list-element-description {
   flex-basis: 100%;
   text-align: justify;
-  font-size: 0.8vw;
+  font-size: 13;
 }
 .footer {
   display: flex;
@@ -127,6 +127,14 @@ a:hover {
   text-decoration: none;
   color: inherit;
 }
+@media (max-width: 1100px) {
+  .list-element {
+    width: 49%;
+  }
+  .list {
+    flex-wrap: wrap;
+  }
+}
 @media (max-width: 700px) {
   .navigation {
     flex-wrap: wrap;
@@ -137,5 +145,8 @@ a:hover {
   }
   .main {
     flex-direction: column;
+  }
+  .list-element {
+    width: 100%;
   }
 }
