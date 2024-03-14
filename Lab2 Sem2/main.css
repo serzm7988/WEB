@@ -1,0 +1,38 @@
+.Main {
+    display: flex;
+    flex-wrap: nowrap;
+    justify-content: space-evenly;
+    background-color: aquamarine;
+}
+
+.Panel {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    padding: 5%;
+    background-color: rgb(152, 202, 51);
+    flex-basis: 30%;
+}
+
+.Sprite {
+    display: flex;
+    padding: 5%;
+    background-color: blue;
+    flex-basis: 30%;
+}
+
+.Results {
+    display: flex;
+    flex-direction: column;
+    padding: 5%;
+    background-color: rgb(50, 158, 108);
+    flex-basis: 30%;
+}
+
+img {
+    width: 100%;
+}
+
+form {
+    width: 100%;
+}
