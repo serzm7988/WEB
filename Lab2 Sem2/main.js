@@ -1,6 +1,9 @@
 const showButton = document.getElementById(`show`);
 const calculateButton = document.getElementById(`calculate`);
 const cleanButton = document.getElementById(`clean`);
+const osnInput = document.getElementById(`osn`);
+const angleInput = document.getElementById(`ang`);
+const selectInput = document.getElementsByTagName(`select`)[0];
 
 function Show(e) {
     e.preventDefault();
@@ -21,11 +24,7 @@ function Calculate(e) {
     angle = (angle * Math.PI) / 180;
     const osn = Number(document.getElementById(`osn`).value);
     let H = Math.tan(angle) * (osn / 2);
-    if (osn <= 0 || angle <= 0 || 2 * angle >= Math.PI) {
-        let text = document.createElement(`p`);
-        text.innerHTML = "Введенные значения не корректны";
-        component.appendChild(text);
-    } else {
+    if ((osn > 0) & (angle > 0) & (2 * angle < Math.PI)) {
         if (document.getElementsByTagName(`select`)[0].options[0].selected) {
             let h = Math.sin(angle) * osn;
             let Htext = document.createElement(`p`);
@@ -60,10 +59,15 @@ function Calculate(e) {
             !document.getElementsByTagName(`select`)[0].options[1].selected &&
             !document.getElementsByTagName(`select`)[0].options[2].selected
         ) {
-            let text = document.createElement(`p`);
-            text.innerHTML = "Выберите выводимые значения";
-            component.appendChild(text);
+            document.getElementsByTagName(
+                `select`
+            )[0].style.backgroundColor = `red`;
         }
+    } else {
+        if (osn <= 0)
+            document.getElementById(`osn`).style.backgroundColor = `red`;
+        if (angle <= 0 || 2 * angle >= Math.PI)
+            document.getElementById(`ang`).style.backgroundColor = `red`;
     }
 }
 
@@ -77,3 +81,12 @@ function Clean(e) {
 showButton.addEventListener("click", Show);
 calculateButton.addEventListener("click", Calculate);
 cleanButton.addEventListener("click", Clean);
+osnInput.addEventListener("click", () => {
+    osnInput.style.backgroundColor = `white`;
+});
+angleInput.addEventListener("click", () => {
+    angleInput.style.backgroundColor = `white`;
+});
+selectInput.addEventListener("click", () => {
+    selectInput.style.backgroundColor = `white`;
+});
