@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="ru">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Statistic</title>
+        <link rel="stylesheet" href="Statistic.css"/>
+    </head>
+    <body>
+        <h1>Статистика</h1>
+        <p>
+            <form action="Lab2_Main.html">
+                <button>Главная</button>
+            </form>
+            <form action="Calendar.html">
+                <button>Календарь</button>
+            </form>
+            <form action="Statistics.html">
+                <button>Статистика</button>
+            </form>
+                <button>Участники проекта</button>
+            </form>
+        </p> 
+        <div id="Filters"><!--Фильтры-->
+            <details>
+                <summary>Фильтры</summary>
+                    Название: <input type="text"><br>
+                    Дата: <input type="date"><br>
+                    Просмотры: от <input type="number"> до <input type="number"><br>
+                    Лайки: от <input type="number"> до <input type="number"><br>
+                    Формат: 
+                    <select>
+                        <option> </option>
+                        <option value="Видео">Видео</option>
+                        <option value="Фото">Фото</option>
+                    </select><br>
+                    Страна: <input type="text"><br>
+                    <button id="Search">Поиск</button>
+            </details>
+        </div>
+        <div id="Grafic"><!--График-->
+            <details>
+                <summary>График</summary>
+                <table>
+                    <tr>
+                        <td valign="top">
+                            <p align="center">Значение по оси OX</p>
+                            <input type="radio" name="OXValue" value="date"> Дата<br>
+                            <input type="radio" name="OXValue" value="country"> Страна<br>
+                            <input type="radio" name="OXValue" value="format"> Формат
+                        </td>
+                        <td valign="top">
+                            <p align="center">Результат</p>
+                            <input type="checkbox" name="result" value="max"> Максимальное количество просмотров<br>
+                            <input type="checkbox" name="result" value="min"> Минимальное количество просмотров<br>
+                        </td>
+                    </tr>
+                </table>
+                <button>Построить</button>
+            </details>
+        </div>
+        <div id="Sort"><!--Сортировка-->
+            <details>
+                <summary>Сортировка</summary>
+                Первый уровень сортировки по 
+                    <select id="sort1">
+                        <option value="name">названию</option>
+                        <option value="date">дате</option>
+                        <option value="views">просмотрам</option>
+                        <option value="likes">лайкам</option>
+                        <option value="format">формату</option>
+                        <option value="country">стране</option>
+                    </select>  
+                    по
+                    <select id="order1">
+                        <option value="1">возрастанию</option>
+                        <option value="-1">убыванию</option>
+                    </select><br>
+                    Второй уровень сортировки по 
+                    <select id="sort2">
+                        <option value="date">дате</option>
+                        <option value="views">просмотрам</option>
+                        <option value="likes">лайкам</option>
+                        <option value="format">формату</option>
+                        <option value="country">стране</option>
+                    </select>  
+                    по
+                    <select id="order2">
+                        <option value="1">возрастанию</option>
+                        <option value="-1">убыванию</option>
+                    </select><br>
+                    Третий уровень сортировки по 
+                    <select id="sort3">
+                        <option value="views">просмотрам</option>
+                        <option value="likes">лайкам</option>
+                        <option value="format">формату</option>
+                        <option value="country">стране</option>
+                    </select>  
+                    по
+                    <select id="order3">
+                        <option value="1">возрастанию</option>
+                        <option value="-1">убыванию</option>
+                    </select>
+            </details>
+        </div>
+        <table id="table"><!-- Таблица -->
+        </table>
+    </body>
+    <script src="Statistics.js"></script>
+    <script src="Data.js"></script>
+</html>

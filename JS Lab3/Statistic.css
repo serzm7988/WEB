@@ -1,0 +1,9 @@
+td,
+th {
+    border: solid 1px black;
+}
+
+body {
+    background-color: #4b0082;
+    color: #e6e6fa;
+}

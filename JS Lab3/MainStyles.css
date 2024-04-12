@@ -1,0 +1,94 @@
+@import url('https://fonts.googleapis.com/css2?family=Stalinist+One&display=swap');
+
+body {
+    margin: 0px;
+    background: no-repeat top/100% url("background.JPG");
+    background-color: #03000e;
+    color: #f2bdef;
+    text-align: center;
+}
+
+.header {
+    width: 100%;
+    margin-top: 55%;
+}
+
+.main {
+    display: inline-block;
+    width: 80%;
+    margin: 1% 0;
+    padding: 1%;
+    background-color: rgb(79, 6, 168);
+}
+
+.navigation {
+    display: block;
+    width: 100%;
+    height: auto;
+}
+
+.navigation button {
+    width: 15%;
+    height: 2vw;
+    float: right;
+    border: 0px;
+    font-size: 1vw;
+    background-color: rgb(255, 0, 221);
+}
+
+.navigation button:hover {
+    background-color: rgb(247, 95, 227);
+}
+
+.introduction {
+    display: block;
+    width: 55%;
+    float: left;
+    padding: 1%;
+}
+
+.introduction img{
+    width: 50%;
+    float: right;
+}
+
+.list {
+    width: 40%;
+    float: left;
+    padding: 1%;
+}
+
+.list-element {
+    width: 100%;
+    border: solid thin rgb(255, 0, 221);
+    overflow: auto;
+    padding: 1%;
+}
+
+.list-element-img {
+    display: inline-block;
+    width: 49%;
+}
+
+.list-element-name {
+    display: inline-block;
+    width: 49%;
+    text-align: center;
+    vertical-align: top;
+}
+
+.list-element-description {
+    display: inline-block;
+    width: 100%;
+    text-align: justify;
+}
+
+h1 {
+    text-align: center;
+    font-size: 5vw;
+    font-family: 'Stalinist One', sans-serif;
+}
+
+img {
+    width: 100%;
+}
