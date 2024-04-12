@@ -1,9 +1,10 @@
-@import url('https://fonts.googleapis.com/css2?family=Stalinist+One&display=swap');
+@import url("https://fonts.googleapis.com/css2?family=Stalinist+One&display=swap");
 
 body {
     margin: 0px;
     background: no-repeat top/100% url("background.JPG");
     background-color: #03000e;
+    background-attachment: fixed;
     color: #f2bdef;
     text-align: center;
 }
@@ -47,7 +48,7 @@ body {
     padding: 1%;
 }
 
-.introduction img{
+.introduction img {
     width: 50%;
     float: right;
 }
@@ -86,7 +87,7 @@ body {
 h1 {
     text-align: center;
     font-size: 5vw;
-    font-family: 'Stalinist One', sans-serif;
+    font-family: "Stalinist One", sans-serif;
 }
 
 img {
