@@ -7,3 +7,22 @@ body {
     background-color: #4b0082;
     color: #e6e6fa;
 }
+
+#main {
+    display: flex;
+}
+table {
+    width: 50%;
+}
+svg {
+    width: 40%;
+}
+svg text {
+    font: 8px Verdana;
+}
+svg path,
+line {
+    fill: none;
+    stroke: #333333;
+    width: 1px;
+}

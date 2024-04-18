@@ -45,7 +45,7 @@
                     <tr>
                         <td valign="top">
                             <p align="center">Значение по оси OX</p>
-                            <input type="radio" name="OXValue" value="date"> Дата<br>
+                            <input type="radio" name="OXValue" value="likes"> Лайки<br>
                             <input type="radio" name="OXValue" value="country"> Страна<br>
                             <input type="radio" name="OXValue" value="format"> Формат
                         </td>
@@ -56,7 +56,7 @@
                         </td>
                     </tr>
                 </table>
-                <button>Построить</button>
+                <button id="build">Построить</button>
             </details>
         </div>
         <div id="Sort"><!--Сортировка-->
@@ -103,9 +103,14 @@
                     </select>
             </details>
         </div>
-        <table id="table"><!-- Таблица -->
-        </table>
+        <div id="main">
+            <table id="table"><!-- Таблица -->
+            </table>
+            <svg></svg>
+        </div>
+        
     </body>
+    <script src="http://d3js.org/d3.v7.js"></script>
     <script src="Statistics.js"></script>
     <script src="Data.js"></script>
 </html>
